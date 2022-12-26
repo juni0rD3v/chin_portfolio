@@ -1,0 +1,1218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins';
+}
+body{
+    overflow-x:hidden ;
+}
+input,textarea{
+    outline: none;
+}
+::placeholder{
+    color:#7BAAAA ;
+}
+html{
+    scroll-behavior: smooth;
+}
+.about , .resume , .portfolio, .contact{
+    padding-top: 98px ;
+    display: flex;
+    height: 800px;
+} 
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+li{
+    list-style: none;
+}
+a{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 300;
+}
+
+/* navbar styling */
+.primary-header{
+    background: #f1f1f1;
+    position: fixed;
+    z-index: 99;
+    border-bottom:3px solid #111;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.navbar{
+    display: flex;
+    padding: 25px 0;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar a:hover{
+    color: #d79309;
+}
+/*menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+.navbar ul{
+    margin-left: 40em;
+    display: flex;
+    gap: 1em;
+}
+.navbar ul li{
+    margin-top: .5em;
+    
+}
+ .logo{
+    padding: 0 0 0 20px;
+    margin: 10px 0 10px 20px;
+}
+
+.container{
+    --max-width: 1100px;
+    --padding: .3rem;
+    width:min(var(--max-width), 100% - (var(--padding) * 2));
+}
+.columns{
+    display: grid;
+}
+@media(min-width:50em){
+    .columns{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+}
+/*general styling*/
+.home{
+    
+    padding-top: 90px;
+}
+.home h3 span{
+    color: #E0AA3E;
+    font-weight: 500;
+}
+.left{
+    background-image: url(/images/svg/shape.svg);
+    content: "";
+    background-repeat: no-repeat;
+    background-size:cover ;
+    width: 120%;
+    height: 850px;
+}
+.left h1{
+    color: #E0AA3E;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 40px;
+    padding: 10px;
+    margin:150px 0 0 50px;
+}
+.right{
+    margin:13.5em 0 0 1.5em;
+    width: 700px;
+}
+.right p{
+    font-size: 30px;
+    font-weight: 300;
+    font-style: normal;
+}
+.right h1{
+    font-size: 80px;
+    font-weight: 500;
+    font-style: normal;
+
+}
+.right h3{
+    font-size: 40px;
+    font-weight: 800px;
+    padding: 30px;
+    margin-left: 2.5em;
+    
+}
+.center{
+    position: absolute;
+    top: 35em;
+    left: 5em;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*about*/
+.about .secondary-left{
+    margin:5em 0 0 .9em;
+}
+.about .secondary-left h1{
+    color: #E0AA3E;
+    font-size: 40px;
+    font-weight: 800;
+    font-style: normal;
+    margin-left: 1em;
+}
+.about .secondary-left p{
+    position: absolute;
+    letter-spacing: 0.03em;
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 6em;
+    margin-top: 4em;
+    line-height: 35px;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    width: 600px;
+}
+.about .secondary-right{
+    margin: 0 0 0 13em;
+    background-color: #18282b;
+    display: inline;
+    width: 108%;
+    color: white;
+}
+.about .secondary-right .top-img{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 2.5em auto ;
+   width: 50%;
+}
+.about .secondary-right h1{
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-weight: 100;
+    font-style: normal;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    font-size: 30px;
+}
+.about .secondary-right .skills{
+    display: inline-block;
+    margin-bottom: 40px;
+}
+.about .secondary-right .skills li{
+    font-size: 13px;
+    font-style: normal;
+    letter-spacing: .03em;
+    margin: 45px auto;
+}
+.about .secondary-right .skills li h3{
+    display: inline-block;
+    position: absolute;
+    margin: 20px 0 0 15px; 
+}
+.about .secondary-right .skills .bar{
+    position: absolute;
+    padding: 3px;
+    border: 1px solid #fff;
+    width: 25%;
+    margin-top: 45px;
+    margin-left: 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #fff;
+}
+.about .secondary-right .skills .bar-img{
+    width: 50%;
+    margin-left: 20px;
+}
+.about .secondary-right .skills .bar span{
+    height: 13px;
+    float: left;
+    background:linear-gradient(to right,#d79309,#d79309,#d79309,#d79309,#fff) ;
+}
+.communication{
+    width: 88%;
+    animation: communication 6s;
+}
+.writing{
+    width: 70%;
+    animation: writing 6s;
+}
+.leadership{
+    width: 95%;
+    animation: leadership 6s;
+}
+@keyframes communication{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 88%;
+    }
+}
+@keyframes writing{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes leadership{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 95%;
+    }
+}
+/*resume*/
+.resume-left{
+    background: #18282b;
+    padding: 5px;
+}
+.resume-left .year{
+    color: white;
+    margin: 20px 0 0 0;
+}
+.resume-left .rst{
+    font-size: 45px;
+    margin-top: 70px;
+    margin-left: 30px;
+    color: #E0AA3E;
+    font-weight: 800;
+    font-style: normal;
+    font-family:  sans-serif;
+}
+.resume-left .year{
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+.resume-left .year li{
+    font-size: 13px;
+    font-style: normal;
+    letter-spacing: .03em;
+    padding: 25px;
+}
+.resume-left .year img{
+    width: 10%;
+    margin-left: 20px;
+}
+.resume-left .year p{
+    display: inline-block;
+    position: absolute;
+    margin: 20px 0 0 10px; 
+    font-size: 15px;
+}
+.resume-left .year h1{
+    display: inline-block;
+    position: absolute;
+    margin: 40px 0 0 0; 
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.resume-left .year .bot{
+    margin-top: 35px;
+    margin-left: 60px;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(4, 191, 191, 0.74);
+}
+.circle{
+    position: relative;
+    display: flex;
+    background: #996515;
+    width: 115%;
+    height: 80%;
+    z-index: -99;
+    top: -700px;
+    left: 170px;
+    border-radius: 50%;
+}
+.resume-right{
+    margin: 150px 0 0 5em;
+}
+.resume-right .resume-title{
+    font-size: 40px;
+    font-weight: 800;
+    font-family: sans-serif;
+    color: #124949;
+    text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 3.5em;
+}
+.resume-right .content{
+    display: inline-block;
+    margin-left: 8.9em;
+    margin-top: 16px;
+}
+.resume .content img{
+    width: 15%;
+}
+.resume .content li{
+    font-size: 13px;
+    font-style: normal;
+    letter-spacing: .03em;
+    padding: 20px;
+
+}
+.resume .content p{
+    display: inline-block;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: sans-serif;
+    font-style: normal;
+
+}
+.resume .content h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: 45px;
+    letter-spacing: .03em;
+    font-size: 25px;
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.resume .content h3{
+    margin-top: 70px;
+    margin-left: 45px;
+    width: 160%;
+    font-weight: 800;
+    font-family: sans-serif;
+    font-size: 17px;
+    color: rgba(4, 90, 90, 0.94);
+}
+.resume .content .center-content{
+    margin: 40px 0 0 45px;
+}
+.resume .content .bottom-content{
+    margin: 40px 0 0 45px;
+}
+.portfolio h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1.5em 0 0 5em;
+    font-size: 48px;
+    color: #124949;
+    text-shadow: rgba(0, 0, 0, 0.25);
+}
+.portfolio .line{
+    border: 1px solid #35a9a9;
+    width: 110%;
+    display: flex;
+    margin: 20px 0 0 4.4em;
+}
+.portfolio .columns{
+    display: grid;
+    gap: 3em;
+    margin-left: 4em;
+    margin-top: 5em;
+    
+}
+.portfolio .columns .box1{
+    width: 380px;
+    height: 420px;
+    background: #1e8383;
+    border-radius: 20px;
+}
+.portfolio .columns .box2{
+    width: 380px;
+    height: 420px;
+    background: #996515;
+    border-radius: 20px;
+}
+.portfolio .columns .box3{
+    width: 380px;
+    height: 420px;
+    background: #1e8383;
+    border-radius: 20px;
+}
+.contact .contact-head{
+    margin: 5em 0 0 6em;
+}
+
+.contact .contact-head .contact-title{
+    font-size: 48px;
+    font-weight: 800;
+    font-family: 'Poppins';
+    line-height: 72px;
+    font-style: normal;
+    color: #135353;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.contact .contact-head .contact-subtitle{
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 30px;
+    color: #2dafaf;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+input{
+    margin-top: 5em;
+}
+label{
+    margin-top: 3em;
+}
+.contact .message .email{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    left: 126px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 30px;
+}
+.contact .message .email-box{
+    position: absolute;
+    width: 463px;
+    height: 50px;
+    left: 126px;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 500;
+    border: .05rem solid #777; 
+}
+
+
+.contact .message .phone{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    left: 810px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 30px;
+}
+.contact .message .phone-box{
+    position: absolute;
+    width: 463px;
+    height: 50px;
+    left: 810px;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 500;
+    border: .05rem solid #777;
+    
+}
+
+ .subject{
+    position: absolute;
+    margin: 10em 0 0 1.5em;
+    left: 595px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 30px;
+}
+.contact .message .box1{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 410px; 
+    margin-top: 22.3em;
+    cursor: pointer;
+
+    
+}
+.contact .message .subject1{
+    position: absolute;
+    margin-top: 13em;
+    left: 380px;
+    padding: .5rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #498585;
+    
+}
+
+.contact .message .box2{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 670px;
+    cursor: pointer;
+    margin-top: 22.3em;
+}
+.contact .message .subject2{
+    position: absolute;
+    margin-top: 13em;
+    left: 615px;
+    padding: .5rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #498585;
+    
+    
+}
+
+.contact .message .box3{
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 920px;
+    margin-top: 22.3em;
+    cursor: pointer;
+ 
+    
+}
+
+.contact .message .subject3{
+    position: absolute;
+    margin-top: 13em;
+    left: 890px;
+    padding: .5rem;
+    font-size: 20px;
+    font-weight: 500;
+    color: #498585;
+    font-style: normal;
+    
+}
+.contact .message .message{
+    position: absolute;
+    margin: 18em 0 0 1.5em;
+    left: 595px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 30px;
+}
+.contact .message .message-box{
+    position: absolute;
+    width: 663px;
+    height: 200px;
+    margin: 21em 0 0 17em;
+    border-radius: 12px;
+    padding: 1rem;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: .3em;
+    resize:none;
+    
+}
+.contact .message .btn{
+    position: absolute;
+    display: inline;
+    width: 10%;
+    height: 50px;
+    left: 599px;
+    margin: 32em auto;
+    font-size: 20px;
+    outline: none;
+    font-weight: 700;
+    color: #369292;
+    letter-spacing: .2em;
+    font-style: normal;
+    border-radius: 7px;
+    border: 1px solid #333;
+    cursor: pointer;
+    
+}
+.contact .message .btn img{
+    width: 30px;
+    margin-top: -5px;
+    margin-right: -10px;
+}
+.contact .message .btn:hover{
+    background: #74dbdb80;
+    color: #000;
+}
+
+
+.footer{
+    position: absolute;
+    width: 1352px;
+    height: 144px;
+    left: 0px;
+    top: 4489px;
+    background: #18282b;
+}
+.footer-email .icon1{
+    position: absolute;
+    width: 26px;
+    height: 29px;
+    left: 70px;
+    top: 50px;
+}
+.footer-email .email-footer{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    left: 120px;
+    top: 57px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 30px;
+    color: white;
+    text-decoration: underline;
+}
+
+
+.footer-home .icon2{
+    position: absolute;
+    width: 26px;
+    height: 29px;
+    left: 410px;
+    top: 50px;
+}
+.footer-home .home-footer{
+    position: absolute;
+    width: 290px;
+    height: 30px;
+    left: 459px;
+    top: 57px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 30px;
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-phone .icon3{
+    position: absolute;
+    width: 26px;
+    height: 29px;
+    left: 780px;
+    top: 50px;
+}
+.footer-phone .phone-footer{
+    position: absolute;
+    width: 290px;
+    height: 30px;
+    left: 829px;
+    top: 57px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Poppins';
+    font-style: normal;
+    line-height: 30px;
+    color: white;
+    text-decoration: underline;
+}
+.footer-profile{
+    position: absolute;
+    width: 26px;
+    height: 29px;
+    left: 1110px;
+    top: -90px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media query*/
+
+@media (max-width:950px){
+    .primary-header{
+        position: fixed;
+        height: 100px;
+        background: #fff;
+        border-bottom:3px solid #111;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+    .primary-header .logo{
+        display: none;
+    }
+    .left{
+        background: cover;
+        width: 1000px;
+    }
+    .navbar li a{
+        font-size: 18px;
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+    }
+    .primary-header .navbar{
+        position: absolute;
+        right: -100%;
+    }
+     .home .center{
+        display: absolute;
+        width: 90%;
+        height: 120%;
+        top: -90px;
+        left: 30px;
+        margin: 0px;padding: 0px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .home .right{
+        width: 150%;
+        position: absolute;
+    }
+    .right {
+        color: white;
+        position: absolute;
+        margin-top: 15em;
+    }
+    .right h1{
+        font-size: 50px;
+    }
+    .left h1{
+        font-size: 65px;
+    }
+    .about .secondary-left h1{
+        color: #E0AA3E;
+        font-size: 40px;
+        font-weight: 800;
+        font-style: normal;
+        margin-top: -.9em;
+    }
+    .about .secondary-right .skills .bar{
+        position: absolute;
+        padding: 3px;
+        border: 1px solid #fff;
+        width: 65%;
+        margin-top: 45px;
+        margin-left: 15px;
+        border-radius: 3px;
+        box-shadow: 0 0 2px #fff;
+    }
+    .about .secondary-left p{
+        position: absolute;
+        font-size: 18px;
+        font-weight: 400;
+        margin-left: 2em;
+        margin-top: 2em;
+        line-height: 25px;
+        display: flex;
+        text-align: justify;
+        align-items: center;
+        width: 400px;
+    }
+    .about .secondary-right{
+        position: absolute;
+        top: 88em;
+        left: -210px;
+        width: 500px;
+    }
+    .resume{
+        position: absolute;
+        top: 2170px;
+    }
+    .resume-right{
+        position: absolute;
+        width: 100%;
+        top: 55em;
+        left: -14em;
+    }
+    .resume-right .content{
+        line-height: 45px;
+        width: 100%;
+        
+    }
+    .resume-right .content h1{
+        font-size: 20px;
+    }
+    .resume-right .content h3{
+        font-size: 13px;
+    }
+    .resume-right .content p{
+        font-size: 12px;
+    }
+    .resume-right .content img{
+        width: 5%;
+    }
+   .resume .content .bottom-content{
+    margin: 70px 0 0 45px;
+    }
+    .resume-title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .resume .resume-right .resume-title{
+        font-size:30px;
+    }
+    .resume-left{
+        line-height: 20px;
+    }
+    .resume-left .rst{
+        font-size: 30px;
+    }
+    .resume-left .year h1{
+        font-size: 20px;
+    }
+    .resume-left .year p{
+        font-size: 12px;
+    }
+    .resume-left .year img{
+       width: 8%;
+    }
+    .resume-left .year .bot{
+        font-size: 16px;
+    }
+    .portfolio{
+        position: absolute;
+        top: 3850px;
+        width: 70%;
+    }
+    .portfolio h1{
+        font-size: 40px;
+        width: 100%;
+        margin-left: 45%;
+    }
+    .portfolio .columns .box1, .portfolio .columns .box2, .portfolio .columns .box3{
+        width: 135%;
+        height: 250px;
+    }
+    .contact{
+        position: absolute;
+        top: 5030px;
+        width: 100%;
+    }
+    .contact .contact-head{
+        margin-left: 20px;
+    }
+    .contact .contact-head .contact-title{
+        font-size: 45px;
+    }
+    .contact .message .email{
+        position: absolute;
+        width: 60px;
+        height: 20px;
+        left: 12px;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: 'Poppins';
+        font-style: normal;
+        line-height: 30px;
+    }
+    .contact .message .email-box{
+        position: absolute;
+        width: 463px;
+        height: 20px;
+        left: 12px;
+        border-radius: 12px;
+        padding: 1rem;
+        font-size: 20px;
+        font-weight: 500;
+        border: .05rem solid #777; 
+    }
+    
+    
+    .contact .message .phone{
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        margin-top: 8em;
+        left: 12px;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: 'Poppins';
+        font-style: normal;
+        line-height: 30px;
+    }
+    .contact .message .phone-box{
+        position: absolute;
+        width: 463px;
+        height: 20px;
+        left: 12px;
+        margin-top: 10em;
+        border-radius: 12px;
+        padding: 1rem;
+        font-size: 20px;
+        font-weight: 500;
+        border: .05rem solid #777;
+        
+    }
+    
+     .subject{
+        position: absolute;
+        margin: 10em 0 0 1.5em;
+        left: 170px;
+        margin-top: 13em;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: 'Poppins';
+        font-style: normal;
+        line-height: 30px;
+    }
+    .contact .message .box1{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 50px; 
+        margin-top: 25.3em;
+        cursor: pointer;
+    
+        
+    }
+    .contact .message .subject1{
+        position: absolute;
+        margin-top: 17em;
+        left: 30px;
+        padding: .5rem;
+        font-size: 18px;
+        font-weight: 500;
+        color: #498585;
+        
+    }
+    
+    .contact .message .box2{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 220px;
+        cursor: pointer;
+        margin-top: 25.3em;
+    }
+    .contact .message .subject2{
+        position: absolute;
+        margin-top: 17em;
+        left: 170px;
+        padding: .5rem;
+        font-size: 18px;
+        font-weight: 500;
+        color: #498585;
+        
+        
+    }
+    
+    .contact .message .box3{
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 400px;
+        margin-top: 25.3em;
+        cursor: pointer;
+     
+        
+    }
+    
+    .contact .message .subject3{
+        position: absolute;
+        margin-top: 17em;
+        left: 370px;
+        padding: .5rem;
+        font-size: 18px;
+        font-weight: 500;
+        color: #498585;
+        font-style: normal;
+        
+    }
+    .contact .message .message{
+        position: absolute;
+        margin: 20em 0 0 1.5em;
+        left: 170px;
+        font-size: 20px;
+        font-weight: 800;
+        font-family: 'Poppins';
+        font-style: normal;
+        line-height: 30px;
+    }
+    .contact .message .message-box{
+        position: absolute;
+        margin-top: 23em;
+        border-radius: 12px;
+        width:80%;
+        margin-left: 50px;
+        padding: 1rem;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: .3em;
+        resize:none;
+        
+    }
+    .contact .message .btn{
+        position: absolute;
+        left: 210px;
+        margin: 35em auto;
+        font-size: 20px;
+        font-weight: 400;
+        color: #2dafaf;
+        letter-spacing: .1em;
+        font-style: normal;
+        cursor: pointer;
+        width: 20%;
+        
+    }
+    .footer{
+        position: absolute;
+        top: 6170px;
+        width: 100%;
+    }
+    .footer img{
+        width: 100%;
+    }
+    .footer-email .icon1{
+        position: absolute;
+        width: 26px;
+        height: 29px;
+        left: 20px;
+        top: 20px;
+    }
+    .footer-email .email-footer{
+        position: absolute;
+        width: 60px;
+        height: 30px;
+        left: 50px;
+        top: 20px;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: 'Poppins';
+        font-style: normal;
+        line-height: 30px;
+        color: white;
+       text-decoration: none;
+    }
+    
+    
+    .footer-home .icon2{
+        position: absolute;
+        width: 26px;
+        height: 29px;
+        left: 20px;
+        top: 55px;
+    }
+    .footer-home .home-footer{
+        position: absolute;
+        width: 290px;
+        height: 30px;
+        left: 50px;
+        top: 55px;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: 'Poppins';
+        font-style: normal;
+        line-height: 30px;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .footer-phone .icon3{
+        position: absolute;
+        width: 26px;
+        height: 29px;
+        left: 20px;
+        top: 90px;
+    }
+    .footer-phone .phone-footer{
+        position: absolute;
+        width: 290px;
+        height: 30px;
+        left: 50px;
+        top: 90px;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: 'Poppins';
+        font-style: normal;
+        line-height: 30px;
+        color: white;
+        text-decoration: none;
+    }
+    .footer-profile{
+        position: absolute;
+        width: 150px;
+        height: 29px;
+        left: 330px;
+        top: -70px;
+    }
+}
+@media (max-width:700px){
+    .primary-header .navbar{
+        position: absolute;
+        right: -80%;
+        background: #fff;
+        width: 39.7rem;
+    }
+    .primary-header{
+        background: #f1f1f1;
+        position: fixed;
+        z-index: 99;
+        border-bottom:3px solid #111;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+    }
+    .center{
+        margin: 0px;padding: 0px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .portfolio h1{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        font-size: 40px;
+        width: 100%;
+    }
+    .home .container{
+        overflow-x: hidden;
+    }
+    .home h3{
+        margin-left: -20px;
+    }
+    .resume .circle{
+       display: none;
+    }
+}
